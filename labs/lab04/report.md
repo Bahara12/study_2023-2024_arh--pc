@@ -73,13 +73,13 @@ header-includes:
 Рассмотрим пример простой программы на языке ассемблера NASM. Традиционно первая программа выводит приветственное сообщение Hello world! на экран.Создайте каталог для работы с программами на языке ассемблера NASM:
  ![](/labs/lab04/report/image/1.png){#fig:fig1 width=70% }
  Перейдите в созданный каталог:
-  ![](/labs/lab04/image/2/изображению.png){#fig:fig1 width=70% }
+  ![](/labs/lab04/report/image/2.png){#fig:fig1 width=70% }
   Создайте текстовый файл с именем hello.asm
  Создал текстовый файл с именем hello.asm
- ![](/labs/lab04/image/3/изображению.png){#fig:fig1 width=70% }
+ ![](/labs/lab04/report/image/3.png){#fig:fig1 width=70% }
  откройте этот файл с помощью любого текстового редактора, например, gedit
 Открыл этот файл с помощью gedit
-![](/labs/lab04/image/4/изображению.png){#fig:fig1 width=70% }
+![](/labs/lab04/report/image/4.png){#fig:fig1 width=70% }
 и введите в него следующий текст:
 ; hello.asm
 SECTION .data ; Начало секции данных
@@ -97,43 +97,43 @@ int 80h ; Вызов ядра
 mov eax,1 ; Системный вызов для выхода (sys_exit)
 mov ebx,0 ; Выход с кодом возврата '0' (без ошибок)
 int 80h ; Вызов ядра
-![](/labs/lab04/image/14/изображению.png){#fig:fig1 width=70% }
+![](/labs/lab04/report/image/14.png){#fig:fig1 width=70% }
 NASM превращает текст программы в объектный код. Например, для компиляции приве-дённого выше текста программы «Hello World» необходимо написать:
 nasm -f elf hello.asm
-![](/labs/lab04/im[](age/5/изображению.png){#fig:fig1 width=70% }
+![](/labs/lab04/report/image/5.png){#fig:fig1 width=70% }
 Выполните следующую команду:
 nasm -o obj.o -f elf -g -l list.lst hello.asm
-![](/labs/lab04/im[](age/6/изображению.png){#fig:fig1 width=70% }
+![](/labs/lab04/report/image/6.png){#fig:fig1 width=70% }
 Как видно из схемы на рис. 4.3, чтобы получить исполняемую программу, объектный файл необходимо передать на обработку компоновщику:
 ld -m elf_i386 hello.o -o hello
 С помощью команды ls проверьте, что исполняемый файл hello был создан.
 Компоновщик ld не предполагает по умолчанию расширений для файлов, но принято использовать следующие расширения:
-![](/labs/lab04/im[](age/7/изображению.png){#fig:fig1 width=70% }
+![](/labs/lab04/report/image/7.png){#fig:fig1 width=70% }
 Ключ -o с последующим значением задаёт в данном случае имя создаваемого исполняе-мого файла.
 Выполните следующую команду:
 ld -m elf_i386 obj.o -o main
-![](/labs/lab04/im[](age/8/изображению.png){#fig:fig1 width=70% }
+![](/labs/lab04/report/image/8.png){#fig:fig1 width=70% }
 Какое имя будет иметь исполняемый файл? Какое имя имеет объектный файл из 
 которого cобран этот исполняемый файл?
 Формат командной строки LD можно увидеть, набрав ld --help. Для получения более подробной информации см. man ld.
 Запустить на выполнение созданный исполняемый файл, находящийся в текущем каталоге,можно, набрав в командной строке:
 ./hello
-![](/labs/lab04/im[](age/9/изображению.png){#fig:fig1 width=70% }
+![](/labs/lab04/report/image/9.png){#fig:fig1 width=70% }
 Задание для самостоятельной работы :
 1- В каталоге ~/work/arch-pc/lab04 с помощью команды cp создайте копию файла
 hello.asm с именем lab4.asm
-![](/labs/lab04/im[](age/10/изображению.png){#fig:fig1 width=70% }
+![](/labs/lab04/report/image/10.png){#fig:fig1 width=70% }
 2- С помощью любого текстового редактора внесите изменения в текст программы в
 файле lab4.asm так, чтобы вместо Hello world! на экран выводилась строка с вашими
 фамилией и именем.
-![](/labs/lab04/im[](age/11/изображению.png){#fig:fig1 width=70% }
-![](/labs/lab04/im[](age/15/изображению.png){#fig:fig1 width=70% }
+![](/labs/lab04/report/image/11.png){#fig:fig1 width=70% }
+![](/labs/lab04/report/image/15.png){#fig:fig1 width=70% }
 3- Оттранслируйте полученный текст программы lab4.asm в объектный файл. Выполните компоновку объектного файла и запустите получившийся исполняемый файл.
-![](/labs/lab04/im[](age/12/изображению.png){#fig:fig1 width=70% }
+![](/labs/lab04/report/image/12.png){#fig:fig1 width=70% }
 4- Скопируйте файлы hello.asm и lab4.asm в Ваш локальный репозиторий в ката-
 лог ~/work/study/2023-2024/"Архитектура компьютера"/arch-pc/labs/lab04/.
 Загрузите файлы на Github.
-![](/labs/lab04/im[](age/13/изображению.png){#fig:fig1 width=70% }
+![](/labs/lab04/report/image/13.png){#fig:fig1 width=70% }
 
 # Теоретическое введение
 
