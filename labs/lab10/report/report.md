@@ -75,14 +75,14 @@ header-includes:
 1. Создайте каталог для программам лабораторной работы No 10, перейдите в него и
 создайте файлы lab10-1.asm, readme-1.txt и readme-2.txt:
 
-![](image/1.png){#fig:fig1 width=70% }
+![](image/1.png){#fig:fig1 width=100% }
 
 1.2 Введите в файл lab10-1.asm текст программы из листинга 10.1 (Программа записи в
 файл сообщения). Создайте исполняемый файл и проверьте его работу.
 
-![](image/2.png){#fig:fig1 width=70% }
+![](image/2.png){#fig:fig1 width=100% }
 
-![](image/3.png){#fig:fig1 width=70% }
+![](image/3.png){#fig:fig1 width=100% }
 
 Результат работы программы:
 user@dk4n31:~$ nasm -f elf -g -l main.lst main.asm
@@ -99,20 +99,20 @@ user@dk4n31:~$ cat readme.txt
 Hello world!
 user@dk4n31:~$
 
-![](image/4.png){#fig:fig1 width=70% }
+![](image/4.png){#fig:fig1 width=100% }
 
-![](image/5.png){#fig:fig1 width=70% }
+![](image/5.png){#fig:fig1 width=100% }
 
 1.3 С помощью команды chmod измените права доступа к исполняемому файлу lab10-1,
 запретив его выполнение. Попытайтесь выполнить файл. Объясните результат.
 
-![](image/6.png){#fig:fig1 width=70% }
+![](image/6.png){#fig:fig1 width=100% }
 
 1.4 С помощью команды chmod измените права доступа к файлу lab10-1.asm с исходным
 текстом программы, добавив права на исполнение. Попытайтесь выполнить его и
 объясните результат.
 
-![](image/7.png){#fig:fig1 width=70% }
+![](image/7.png){#fig:fig1 width=100% }
 
 1.5 В соответствии с вариантом в таблице 10.4 предоставить права доступа к файлу readme-
 1.txt представленные в символьном виде, а для файла readme-2.txt – в двочном виде.
@@ -120,7 +120,7 @@ user@dk4n31:~$
 
 6:     -w- r-x -w-        011 001 111
 
-![](image/8.png){#fig:fig1 width=70% }
+![](image/8.png){#fig:fig1 width=100% }
 
 # Задание для самостоятельной работы
 
@@ -132,11 +132,11 @@ user@dk4n31:~$
 • дописать в файл строку введенную с клавиатуры
 • закрыть файл
 
-![](image/9hw.png){#fig:fig1 width=70% }
+![](image/9.png){#fig:fig1 width=100% }
 
-![](image/10hw.png){#fig:fig1 width=70% }
+![](image/10.png){#fig:fig1 width=100% }
 
-![](image/11hw.png){#fig:fig1 width=70% }
+![](image/11.png){#fig:fig1 width=100% }
 
 # Теоретическое введение
 
